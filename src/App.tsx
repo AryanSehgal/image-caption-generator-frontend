@@ -205,6 +205,7 @@ function App() {
           View on GitHub
         </a>
       </footer>
+      
     </div>
   )
 }
