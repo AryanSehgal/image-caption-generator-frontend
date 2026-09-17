@@ -242,6 +242,16 @@
   border-color: #ff85c0;
 }
 
+.footer-link {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 480px) {
   .app {
     padding: 1rem 0.75rem;
