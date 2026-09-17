@@ -186,17 +186,8 @@ function App() {
       <footer className="footer">
         Built with React, TypeScript & a dash of AI ✨
         <br />
-        Made by{' '}
-        
-          href="https://github.com/AryanSehgal"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-link"
-        >
-          Aryan Sehgal
-        </a>
-        {' '}·{' '}
-        
+        Made by Aryan Sehgal {'  '}
+        <a        
           href="https://github.com/AryanSehgal/image-caption-generator-frontend"
           target="_blank"
           rel="noopener noreferrer"
@@ -205,7 +196,6 @@ function App() {
           View on GitHub
         </a>
       </footer>
-      
     </div>
   )
 }
