@@ -3,6 +3,7 @@
 A React + TypeScript single-page app that lets users upload a photo and receive an AI-generated caption in real time, powered by a custom-trained image captioning model.
 
 **Live App:** https://image-caption-generator-frontend.vercel.app/
+
 **API it connects to:** https://image-caption-generator-backend.onrender.com
 
 ## Related Repositories
@@ -77,7 +78,3 @@ Deployed on **Vercel**, connected directly to this GitHub repo — every push to
 ## Known Limitations
 
 This UI is intentionally restricted to **JPEG uploads**, and the interface tells users the app **works best with photos of people, dogs, and everyday outdoor scenes**. This isn't a frontend limitation — it reflects a real characteristic of the backend's captioning model, which was trained on the Flickr8k dataset (a small, domain-limited dataset dominated by exactly those categories). See the [backend README](https://github.com/AryanSehgal/image-caption-generator-backend) and [training notebook repo](https://github.com/AryanSehgal/image-captioning-case-study) for the full explanation.
-
-## Credits
-
-Built by **Aryan Sehgal** as the deployment and frontend layer for an image captioning model originally developed by **Apoorv Garg**.
