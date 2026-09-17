@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fbc2eb 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: dropIn 0.6s ease;
+}
+
+.header h1 {
+  font-size: 2.75rem;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header p {
+  color: #fff;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.main {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+
+.dropzone {
+  width: 100%;
+  min-height: 220px;
+  border: 3px dashed #ffb6d9;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff8fb;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.dropzone:hover {
+  border-color: #ff85c0;
+  background: #fff0f7;
+  transform: scale(1.01);
+}
+
+.dropzone--active {
+  border-color: #ff4fa3;
+  background: #ffe6f2;
+  transform: scale(1.02);
+}
+
+.dropzone-emoji {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+.dropzone-text {
+  color: #a05a80;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.dropzone-hint {
+  color: #c9a0bd;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.format-badge {
+  background: #ff4fa3;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.preview-img {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6fb0, #ff9a56);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 111, 176, 0.4);
+}
+
+.btn-primary:not(:disabled):hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(255, 111, 176, 0.5);
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #444;
+}
+
+.btn-secondary:hover {
+  background: #e2e2e2;
+}
+
+.hint {
+  color: #b98ab0;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+.error-box {
+  background: #ffe5e5;
+  color: #c0392b;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: dropIn 0.5s ease;
+  width: 100%;
+}
+
+.result-img {
+  max-width: 100%;
+  max-height: 280px;
+  border-radius: 16px;
+  object-fit: contain;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.caption-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6b3f5e;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 2rem;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.samples {
+  width: 100%;
+  text-align: center;
+}
+
+.samples-label {
+  color: #b98ab0;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.samples-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.sample-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.sample-thumb:hover {
+  transform: scale(1.08);
+  border-color: #ff85c0;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem 0.75rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .main {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .dropzone {
+    min-height: 180px;
+  }
+
+  .sample-thumb {
+    width: 52px;
+    height: 52px;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
